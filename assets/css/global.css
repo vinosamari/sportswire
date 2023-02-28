@@ -6,7 +6,7 @@
 }
 .header {
   font-family: "Barlow", sans-serif;
-  @apply font-bold text-4xl rounded-3xl shadow-xl text-black my-10 p-5 text-purple-600;
+  @apply font-bold text-4xl rounded-3xl shadow-xl  my-10 p-5 text-purple-600;
 }
 .subheader {
   font-family: "Ubuntu", sans-serif;
@@ -19,6 +19,7 @@
   @apply shadow-sm hover:shadow-xl transform transition-all duration-300 ease-in-out rounded w-5/6 my-8 text-left py-5 px-3 mx-auto cursor-pointer;
 }
 .card .header {
+  font-family: "Ubuntu", sans-serif;
   @apply w-1/2 my-1 rounded-sm text-2xl shadow-none p-0;
 }
 .card .subheader {
