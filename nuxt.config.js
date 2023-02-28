@@ -17,17 +17,10 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    link: [
-      {
-        rel: "stylesheet",
-        type: "text/css",
-        href: "/assets/css/global.css",
-      },
-    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/css/global.css"],
+  css: ["~/assets/css/styles.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
