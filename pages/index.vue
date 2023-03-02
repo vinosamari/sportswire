@@ -44,29 +44,34 @@ export default {
   },
 };
 </script>
-<style scoped>
-.wrapper {
+<style>
+/* .wrapper {
   @apply container tracking-wider text-center p-2 mx-auto;
-}
+} */
+/* 
 .header {
   font-family: "Barlow", sans-serif;
   @apply font-bold text-4xl rounded-3xl shadow-xl  my-10 p-5;
-}
+} */
+/* 
 .subheader {
   font-family: "Ubuntu", sans-serif;
   @apply text-xl font-bold tracking-wider;
-}
-.avatar {
+} */
+
+/* .avatar {
   @apply rounded-full w-24 h-24 object-cover;
-}
-.card {
+} */
+
+/* .card {
   @apply shadow-sm hover:shadow-xl transform transition-all duration-300 ease-in-out rounded w-5/6 my-8 text-left py-5 px-3 mx-auto cursor-pointer hover:bg-purple-300 hover:scale-105 hover:text-white;
-}
-.card .header {
+} */
+
+/* .card .header {
   font-family: "Ubuntu", sans-serif;
   @apply my-1 rounded-sm text-2xl shadow-none p-0;
-}
-.card .subheader {
+} */
+/* .card .subheader {
   @apply text-xs;
 }
 .content {
@@ -74,5 +79,5 @@ export default {
 }
 .btn {
   @apply bg-purple-600 text-white uppercase font-bold tracking-wider rounded-md m-3 px-6 py-2 text-sm;
-}
+} */
 </style>
