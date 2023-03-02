@@ -71,6 +71,76 @@ export default {
       appleStatusBarStyle: "black",
       mobileAppIOS: true,
     },
+    // OFFLINE CACHING
+    workbox: {
+      offline: true,
+
+      runtimeCaching: [
+        // Cache assets
+        {
+          urlPattern: /\.(?:png|gif|jpg|jpeg|svg|css|js)$/,
+          handler: "cacheFirst",
+          options: {
+            cacheName: "assets-cache",
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+            },
+          },
+        },
+        // Cache images
+        {
+          urlPattern: "https://images.pexels.com/photos/.*",
+          handler: "cacheFirst",
+          method: "GET",
+        },
+        {
+          urlPattern: /\.(?:png|gif|jpg|jpeg)$/,
+          handler: "cacheFirst",
+          options: {
+            cacheName: "images-cache",
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+            },
+          },
+        },
+        // Cache fonts
+        {
+          urlPattern: "https://fonts.googleapis.com/.*",
+          handler: "cacheFirst",
+          method: "GET",
+        },
+        {
+          urlPattern: "https://fonts.gstatic.com/.*",
+          handler: "cacheFirst",
+          method: "GET",
+        },
+        {
+          urlPattern: /\.(?:woff|woff2)$/,
+          handler: "cacheFirst",
+          options: {
+            cacheName: "fonts-cache",
+            expiration: {
+              maxEntries: 20,
+              maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year
+            },
+          },
+        },
+        // Cache news items
+        {
+          urlPattern: "/news/:id",
+          handler: "networkFirst",
+          options: {
+            cacheName: "news-cache",
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60, // 1 hour
+            },
+          },
+        },
+      ],
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
