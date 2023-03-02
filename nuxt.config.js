@@ -75,4 +75,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  purgeCSS: {
+    enabled: false,
+    paths: ["components/**/*.vue", "layouts/**/*.vue", "pages/**/*.vue"],
+  },
 };
